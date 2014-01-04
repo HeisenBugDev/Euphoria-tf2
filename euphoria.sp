@@ -2,6 +2,8 @@
 
 #define PLUGIN_VERSION "0.0.1"
 
+static String:KVPath[PLATFORM_MAX_PATH];
+
 public Plugin:myinfo = 
 {
 	name = "Euphoria-TF2",
@@ -14,7 +16,7 @@ public Plugin:myinfo =
 public OnPluginStart()
 {
 	PrintToServer("Info is starting to be sent");
-	CreateDirectory("addons/sourcemod/data/playerinfo.txt", 3);
+	//CreateDirectory("addons/sourcemod/data/playerinfo.txt", 3);
 	BuildPath(Path_SM, KVPath, sizeof(KVPath), "data/playerinfo.txt");
 }
 
