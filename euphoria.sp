@@ -110,6 +110,7 @@ public AlterPlayerInfo(client, connection)
          
          Minutes[client] = KvGetNum(DB, "Minutes", 0);
          Deaths[client] = KvSetNum(DB, "Deaths", 0);
+         Kills[client] = KvSetNum(DB, "Kills", 0);
          
          new connections = KvGetNum(DB, "connections");
          
@@ -129,6 +130,7 @@ public AlterPlayerInfo(client, connection)
       {
          KvSetNum(DB, "Minutes", Minutes[client]);
          KvSetNum(DB, "Deaths", Deaths[client]);
+         KvSetNum(DB, "Kills", Kills[client]);
       }
    }
    
